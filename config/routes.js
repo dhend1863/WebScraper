@@ -1,11 +1,10 @@
 // Bring in the scrape function
-import scrape from "../scripts/scrape";
-
+const scrape = require("../scripts/scrape")
 // Bring headline and notes from the controller
 const headlinesController = require("../controllers/headlines");
 const notesController = require("../controllers/notes");
 
-export default function(router) {
+module.exports = function(router) {
     // This route renders homepage
     router.get("/", function(req, res) {
         res.render("home");

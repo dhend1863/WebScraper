@@ -1,7 +1,7 @@
 // Controller for Notes
 
-import Note from "../models/Note";
-import makeDate from "../scripts/date";
+const Note = require("../models/Note");
+const makeDate = require("../scripts/date");
 
 module.exports = {
     get: function(data, cb) {

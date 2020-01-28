@@ -1,5 +1,5 @@
-import scrape from "../scripts/scrape";
-import makeDate from "../scripts/date";
+const scrape = require("../scripts/scrape");
+const makeDate = require("../scripts/date");
 
 // Bring in headline and Note Mongoose Models
 const Headline = require("../models/Headline");

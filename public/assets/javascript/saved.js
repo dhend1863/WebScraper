@@ -53,7 +53,7 @@ $(document).ready(function() {
         )
       );
   
-      var panelBody = $("<div class='panel-body'>").text(article.summary);
+      const panelBody = $("<div class='panel-body'>").text(article.summary);
   
       panel.append(panelHeader, panelBody);
   
@@ -161,7 +161,7 @@ $(document).ready(function() {
           message: modalText,
           closeButton: true
         });
-        var noteData = {
+        const noteData = {
           _id: currentArticle._id,
           notes: data || []
         };
@@ -178,8 +178,8 @@ $(document).ready(function() {
       // This function handles what happens when a user tries to save a new note for an article
       // Setting a variable to hold some formatted data about our note,
       // grabbing the note typed into the input box
-      var noteData;
-      var newNote = $(".bootbox-body textarea")
+      const noteData;
+      const newNote = $(".bootbox-body textarea")
         .val()
         .trim();
       // If we actually have data typed into the note input field, format it
@@ -197,7 +197,7 @@ $(document).ready(function() {
       // This function handles the deletion of notes
       // First we grab the id of the note we want to delete
       // We stored this data on the delete button when we created it
-      var noteToDelete = $(this).data("_id");
+      const noteToDelete = $(this).data("_id");
       // Perform an DELETE request to "/api/notes/" with the id of the note we're deleting as a parameter
       $.ajax({
         url: "/api/notes/" + noteToDelete,
